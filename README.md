@@ -27,17 +27,32 @@ This should take a little while.
 
 # Classifying images
 
+## Let's classify an iPhone 7 plus.
+
 Let's use an annoymous photo of an iPhone 7 plus to validate our trained model:
 
     python -m scripts.label_image --graph=tf_files/retrained_graph.pb --image=uploaded_photos/photo1.jpg
     
-You should an output something like this:
+You should get an output something like this:
 
     iphone 7 plus 0.989413
     xiaomi redmi 4a 0.00497179
     tulips 0.00374058
     roses 0.00186522
     sunflowers 5.5651e-06
+    
+## Let's classify a Xiaomi Redmi 4A 
+
+    python -m scripts.label_image --graph=tf_files/retrained_graph.pb --image=uploaded_photos/photo2.jpg
+    
+You should get an output something like this:
+
+    xiaomi redmi 4a 0.999836
+    roses 7.8841e-05
+    tulips 7.47027e-05
+    iphone 7 plus 9.5819e-06
+    dandelion 3.06468e-07
+
 
 
 
