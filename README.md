@@ -8,14 +8,14 @@ We'll be using mobilenet with parameters 0.50 and 224 in this example.
 
 # Folders layout:
 
-- photos: contains all the photos for training the model
-- scripts: will be calling the files here to run our model
-- tf_files: outputs from the model
-- uploaded_photos: dump photos that we want to classify into this folder.
+- `photos`: contains all the photos for training the model
+- `scripts`: will be calling the files here to run our model
+- `tf_files`: outputs from the model
+- `uploaded_photos`: dump photos that we want to classify into this folder.
 
 # Opening Tensorboard
 
-    tensorboard --logdir tf_files/training_summaries &
+    tensorboard --logdir=tf_files/training_summaries &
     
 # Training images
 
@@ -30,7 +30,6 @@ This should take a little while.
 Let's use an annoymous photo of an iPhone 7 plus to validate our trained model:
 
     python -m scripts.label_image --graph=tf_files/retrained_graph.pb --image=uploaded_photos/photo1.jpg
-    iphone 7 plus 0.989413
     
 You should an output something like this:
 
