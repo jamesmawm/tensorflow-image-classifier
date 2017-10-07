@@ -101,5 +101,6 @@ ENV/
 .mypy_cache/
 
 .idea/
+.idea
 .git/
 *.pyc
